@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>手插口袋的少年&#39;s Blog</title>
+  
+  <subtitle>诗和远方</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://raiet.github.io/"/>
+  <updated>2018-04-09T15:50:49.222Z</updated>
+  <id>http://raiet.github.io/</id>
+  
+  <author>
+    <name>raiet</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在svn中使用文件/目录链接</title>
+    <link href="http://raiet.github.io/%E5%B7%A5%E5%85%B7/svn_externals/"/>
+    <id>http://raiet.github.io/工具/svn_externals/</id>
+    <published>2018-04-09T15:50:49.230Z</published>
+    <updated>2018-04-09T15:50:49.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>在日常开发中经常会遇到几个团队的代码中，有部分代码是公用的，比如我所在团队的前后端就是用同一份<code>proto</code>协议，如果每次修改都要向两边提交，且不说会不会漏，就两次提交已经是不能忍受了。其实<code>svn</code>本身就有一个类似外链的功能，可以满足这中场景。<br><a id="more"></a></p><p>目录属性<code>svn:externals</code>,就可以搞定上面的问题，步骤如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 首先进入要用来链接外部代码目录</span><br><span class="line">2. 创建一个文本文件，估且叫他path.txt吧，文件里包含若干行，每行就是一个svn链接</span><br><span class="line">3. 命令：svn propset svn:externals . -F path.txt</span><br><span class="line">4. 命令：svn ci . -m &quot;say sth.&quot;</span><br><span class="line">5. 命令：svn up</span><br></pre></td></tr></table></figure></p><p>上面的步骤3中，如果觉得先弄一个txt文件比较麻烦，可以换成下面这个命令，可以启动一个vim编辑</p><pre><code>svn propedit svn:externals . --editor-cmd=vim</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在日常开发中经常会遇到几个团队的代码中，有部分代码是公用的，比如我所在团队的前后端就是用同一份&lt;code&gt;proto&lt;/code&gt;协议，如果每次修改都要向两边提交，且不说会不会漏，就两次提交已经是不能忍受了。其实&lt;code&gt;svn&lt;/code&gt;本身就有一个类似外链的功能，可以满足这中场景。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://raiet.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="svn" scheme="http://raiet.github.io/tags/svn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://raiet.github.io/%E6%8A%80%E6%9C%AF/hello-world/"/>
+    <id>http://raiet.github.io/技术/hello-world/</id>
+    <published>2018-04-06T15:18:07.982Z</published>
+    <updated>2018-04-06T15:18:07.973Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://raiet.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="PS3" scheme="http://raiet.github.io/tags/PS3/"/>
+    
+      <category term="Games" scheme="http://raiet.github.io/tags/Games/"/>
+    
+  </entry>
+  
+</feed>
