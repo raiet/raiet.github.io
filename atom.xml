@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://raiet.github.io/"/>
-  <updated>2018-04-10T14:41:30.236Z</updated>
+  <updated>2018-04-10T14:13:05.184Z</updated>
   <id>http://raiet.github.io/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://raiet.github.io/uncategorized/test/"/>
-    <id>http://raiet.github.io/uncategorized/test/</id>
-    <published>2018-04-10T14:41:30.000Z</published>
-    <updated>2018-04-10T14:41:30.236Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>linux中hook成员函数</title>
